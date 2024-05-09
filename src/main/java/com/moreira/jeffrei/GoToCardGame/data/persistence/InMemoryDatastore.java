@@ -1,14 +1,12 @@
 package com.moreira.jeffrei.GoToCardGame.data.persistence;
 
-import com.moreira.jeffrei.GoToCardGame.data.model.BasePersistableEntity;
-import com.moreira.jeffrei.GoToCardGame.data.model.Deck;
-import com.moreira.jeffrei.GoToCardGame.data.model.Game;
-import com.moreira.jeffrei.GoToCardGame.data.model.Player;
+import com.moreira.jeffrei.GoToCardGame.data.model.*;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * Created by jeffr on 2024-05-07
@@ -21,7 +19,7 @@ public class InMemoryDatastore implements Datastore{
 
 
     private static final Map<String, Long> sequences;
-    private static final Map<Class<?>, String> entityNames;
+    private static final Map<Class<? extends BasePersistableEntity>, String> entityNames;
 
     static {
         dataset = new HashMap<>();
@@ -31,6 +29,7 @@ public class InMemoryDatastore implements Datastore{
         entityNames.put(Deck.class, "deck");
         entityNames.put(Game.class, "game");
         entityNames.put(Player.class, "player");
+        entityNames.put(LogEntry.class, "log");
 
         for (String entityName : entityNames.values()) {
             dataset.put(entityName, new HashMap<>());
@@ -51,6 +50,17 @@ public class InMemoryDatastore implements Datastore{
         synchronized(dataset) {
             var entries = Map.copyOf(dataset.get(entityName));
             return Optional.ofNullable(entries.get(id)); // could check throw an not found exception instead of returning null
+        }
+    }
+
+    @Override
+    public Set<BasePersistableEntity> findAll(Class<?> entityClass) {
+
+        String entityName = getEntityName(entityClass);
+
+        synchronized(dataset) {
+            var entries = dataset.get(entityName);
+            return Set.copyOf(entries.values()); // could check throw an not found exception instead of returning null
         }
     }
 

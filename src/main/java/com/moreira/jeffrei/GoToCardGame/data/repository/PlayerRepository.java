@@ -2,6 +2,7 @@ package com.moreira.jeffrei.GoToCardGame.data.repository;
 
 import com.moreira.jeffrei.GoToCardGame.data.model.Player;
 import com.moreira.jeffrei.GoToCardGame.data.persistence.Datastore;
+import com.moreira.jeffrei.GoToCardGame.service.LogService;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class PlayerRepository extends BaseRepository<Player> {
-    public PlayerRepository(Datastore datastore) {
-        super(datastore);
+    public PlayerRepository(Datastore datastore, LogService logService) {
+        super(datastore, logService);
     }
 }
