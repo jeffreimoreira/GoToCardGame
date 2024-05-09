@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "a9912779-0b08-4cd2-afa8-1b7a6af558f4",
+		"name": "GoToCardGame",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3328838"
+	},
+	"item": [
+		{
+			"name": "Create Deck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/GoToCardGame/api/v1/deck",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GoToCardGame",
+						"api",
+						"v1",
+						"deck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/GoToCardGame/api/v1/game",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GoToCardGame",
+						"api",
+						"v1",
+						"game"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Deck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "1",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/GoToCardGame/api/v1/game/1/decks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GoToCardGame",
+						"api",
+						"v1",
+						"game",
+						"1",
+						"decks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"Fulano\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/GoToCardGame/api/v1/game/1/players",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GoToCardGame",
+						"api",
+						"v1",
+						"game",
+						"1",
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deal cards to player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "2",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/GoToCardGame/api/v1/game/1/players/1/deal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GoToCardGame",
+						"api",
+						"v1",
+						"game",
+						"1",
+						"players",
+						"1",
+						"deal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Undealt Cards",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/GoToCardGame/api/v1/game/1/undealtCards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GoToCardGame",
+						"api",
+						"v1",
+						"game",
+						"1",
+						"undealtCards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Players",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/GoToCardGame/api/v1/game/1/players",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GoToCardGame",
+						"api",
+						"v1",
+						"game",
+						"1",
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Game",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/GoToCardGame/api/v1/game/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GoToCardGame",
+						"api",
+						"v1",
+						"game",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Player",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/GoToCardGame/api/v1/game/1/players/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GoToCardGame",
+						"api",
+						"v1",
+						"game",
+						"1",
+						"players",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Logs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/GoToCardGame/api/v1/logs/game/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"GoToCardGame",
+						"api",
+						"v1",
+						"logs",
+						"game",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
