@@ -10,3 +10,6 @@ Things I would have done, given more time:
 - Create and use relevant exceptions
 - Track if a game is in progress to avoid undesired actions such as adding a deck
 - use JPA and better entity relationships
+
+
+*** NOTE: logging feature added after deadline
