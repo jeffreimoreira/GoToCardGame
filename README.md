@@ -6,6 +6,7 @@ Assumptions
 Things I would have done, given more time:
 
 - Unit and endpoint tests with mockito
+- use a proper git branching strategy for each feature
 - Create and use relevant exceptions
 - Track if a game is in progress to avoid undesired actions such as adding a deck
 - use JPA and better entity relationships
