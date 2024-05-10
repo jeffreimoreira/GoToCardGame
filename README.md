@@ -12,9 +12,9 @@ Things I would have done, given more time:
 - Track if a game is in progress to avoid undesired actions such as adding a deck
 - use JPA and better entity relationships
 - add javadoc for functions and classes, and OpenAPI to document endpoints
+- use DTOs to map request bodies and responses. In a personal project I would definitely use mapStruct, but in a professional setting I would align to company standards. The same applies for Project Lombok.
 
 
 *** NOTE: logging feature added after deadline
 
-*** For usage, see src/main/resources/GoToCardGame.postman_collection.json
-- it can be imported on postman
+*** For usage, see src/main/resources/GoToCardGame.postman_collection.json (it can be imported on postman)
